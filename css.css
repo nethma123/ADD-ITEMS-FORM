@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: #000;
+    overflow: hidden;
+}
+
+.slideshow{
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   overflow: hidden; 
+}
+
+.slideshow-item{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleImages 31s infinite;
+    
+}
+
+
+.slideshow-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 31s infinite;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+    animation-delay: 0s;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+    animation-delay: 20s;
+}
+.form{
+   
+    position: relative;
+    top: -520px;
+    
+}
+.form h1{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form{
+    position: relative;
+    top:-860px;
+    left: 70%;
+    width: 20%;
+    height: 800px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;                            
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:#ffffff1a;
+    padding: 1.5em;
+    border-radius: 25px;
+    border: 2px solid rgb(39, 39, 39);
+    text-align: center;
+    backdrop-filter: blur(20px);
+    
+}
+input{
+    color: aliceblue;
+}
+
+.form tr td{
+    position: relative;
+    left: 140px;
+    top:-119px;
+    
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+   
+
+}
+.form td h1{
+    position: relative;
+    right: 150px;
+    top: 10px;
+    
+    
+}
+td input{
+    background:transparent;
+    border:0;
+    border-bottom: 2px solid rgb(69, 211, 175);
+    box-sizing: border-box;
+    padding: 2px;
+    
+}
+td .d{
+    color: white;
+    position: relative;
+    right: 10px;
+}
+tr td select.o{
+    width: 170px;
+    border-radius: 5px;
+}
+td input#file{
+    position: relative;
+    top:-55px;
+    width: 190px;
+    color: aliceblue;
+}
+iframe{
+    position: relative;
+    top: 74%;
+}
+.btn{
+    position: relative;
+    top:100px;
+    border-bottom: 0;
+    border: 2px solid rgb(69, 211, 175);
+    color: white;
+    width: 80px;
+    padding:5px;
+}
+.btn:hover{
+    background-color: aquamarine;
+    color: #000;
+}
+td #select{
+    border-radius: 9px;
+    background-color: darkgrey;
+}
+td #select option{
+    text-align: center;
+}
+
+@keyframes cycleImages {
+    25%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes zoom {
+    100%{
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width:1254px){
+    .form{
+        position: relative;
+        top: -900px;
+        width: 60%;
+    }
+    .slideshow{
+        width: 200%;
+        height: 200vh;
+        position: relative;
+        overflow: hidden; 
+     }
+    
+}
+@media screen and (max-width:1600px){
+    .form {
+        position: relative;
+        top: -70px;
+    }
+}
+
